@@ -1,4 +1,6 @@
-*/ * {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
     font-family: 'Lato', monospace, serif;
 }
 
@@ -11,47 +13,47 @@ body {
     background-color: rgb(227, 227, 227);
 }
 
-section.header {
+header {
     display: flex;
     max-width: 100%;
     min-width: 400px;
+
+    >div {
+        margin: 0 auto;
+        height: 20px;
+        width: auto;
+        margin-bottom: 25px;
+    }
+
+    .line {
+        width: 20%;
+        height: 20px;
+        color: transparent;
+
+        &.red {
+            background-color: #f96565;
+        }
+
+        &.blue {
+            background-color: #3a66e6;
+        }
+
+        &.lightblue {
+            background-color: #1bc9e4;
+        }
+
+        &.orange {
+            background-color: #ffc455;
+        }
+
+        &.orangered {
+            background-color: #ff754a;
+        }
+
+    }
 }
 
-section.header>div {
-    margin: 0 auto;
-    height: 20px;
-    width: auto;
-    margin-bottom: 25px;
-}
-
-.header .line {
-    width: 20%;
-    height: 20px;
-    color: transparent;
-
-    &.red {
-        background-color: #f96565;
-    }
-
-    &.blue {
-        background-color: #3a66e6;
-    }
-
-    &.lightblue {
-        background-color: #1bc9e4;
-    }
-
-    &.orange {
-        background-color: #ffc455;
-    }
-
-    &.orangered {
-        background-color: #ff754a;
-    }
-
-}
-
-section.main {
+main {
     display: flex;
     background-color: white;
     flex-direction: column;
@@ -60,144 +62,129 @@ section.main {
     max-width: 60%;
     min-width: 400px;
     align-items: center;
+
+    .main__title {
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+        border: black 5px solid;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0rem;
+            margin-top: 0rem;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 0rem;
+        }
+    }
+
+    .main__img {
+        display: flex;
+        max-width: 50%;
+        min-width: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .main__content {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .main__content__left,
+    .main__content__right {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .main__content__left {
+        min-width: auto;
+        text-align: right;
+        padding: 0 2em 0 2em;
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 0rem;
+            margin-top: 0rem;
+            text-align: right;
+        }
+    }
+
+    .main__content__right {
+        min-width: auto;
+        text-align: left;
+        padding: 0 2em 0 2em;
+        border-left: black 3px solid;
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            text-align: left;
+        }
+
+        h4 {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 0rem;
+            margin-top: 0rem;
+            text-align: left;
+        }
+    }
+
+    .main__bottom {
+        max-width: 100%;
+        min-width: 400px;
+        border-bottom: black 2px solid;
+        align-items: center;
+        display: flex;
+        margin-top: 2rem;
+        text-align: center;
+    }
 }
 
-/* section.main > div {
-    display: flex;
-    flex-direction: row;
-    flex-flow: column;
-
-} */
-
-section.main .main__title {
-    display: flex;
-    flex-direction: column;
-    max-width: 60%;
-    border: black 5px solid;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
-}
-
-section.main .main__title h1 {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 0rem;
-    margin-top: 0rem;
-}
-
-section.main .main__title h4 {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0rem;
-}
-
-/* section.main p {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-} */
-
-section.main .main__img {
-    display: flex;
-    max-width: 50%;
-    min-width: 100px;
-    margin: 0 auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-}
-
-section.main .main__content {
-    display: flex;
-    width: 100%;
-    margin: auto;
-}
-
-section.main .main__content__left,
-section.main .main__content__right {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-section.main .main__content__left {
-    min-width: auto;
-    text-align: right;
-    padding: 0 2em 0 2em;
-}
-
-section.main .main__content__left p {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    text-align: right;
-}
-
-section.main .main__content__left h3 {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    text-align: right;
-}
-
-section.main .main__content__left h4 {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 0rem;
-    margin-top: 0rem;
-    text-align: right;
-}
-
-section.main .main__content__right {
-    min-width: auto;
-    text-align: left;
-    padding: 0 2em 0 2em;
-    border-left: black 3px solid;
-}
-
-section.main .main__content__right p {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    text-align: left;
-}
-
-section.main .main__content__right h3 {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-    text-align: left;
-}
-
-section.main .main__content__right h4 {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 0rem;
-    margin-top: 0rem;
-    text-align: left;
-}
-
-section.main .main__bottom {
-    max-width: 100%;
-    min-width: 400px;
-    border-bottom: black 2px solid;
-    align-items: center;
-    display: flex;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-section.footer {
+footer {
     background-color: rgb(227, 227, 227);
     display: flex;
     flex-direction: column;
@@ -206,15 +193,15 @@ section.footer {
     width: 60%;
     min-width: 400px;
 
-}
+    p {
+        font-size: 1em;
+        font-weight: 400;
+        color: black;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
 
-section.footer p {
-    font-size: 1em;
-    font-weight: 400;
-    color: black;
-    margin-bottom: 2rem;
-    margin-top: 0.5rem;
-    text-align: right;
 }
 
 .link {
@@ -228,7 +215,7 @@ section.footer p {
 
 
 @media (max-width: 768px) {
-    section.main .main__content__left {
+    main .main__content__left {
         display: flex;
         max-width: 100%;
         width: 100%;
@@ -237,7 +224,7 @@ section.footer p {
 
     }
 
-    section.main .main__content__right {
+    main .main__content__right {
         border-left: none;
         display: flex;
         max-width: 100%;
@@ -246,14 +233,14 @@ section.footer p {
         padding: 1rem 0rem 1rem 0rem;
     }
 
-    section.main .main__content {
+    main .main__content {
         display: flex;
         flex-direction: column;
         width: 70%;
         margin: auto;
     }
 
-    section.main .main__bottom {
+    main .main__bottom {
         max-width: 100%;
         min-width: 200px;
         border-bottom: black 2px solid;
@@ -263,7 +250,7 @@ section.footer p {
         text-align: center;
     }
 
-    section.footer p {
+    footer p {
         font-size: 1em;
         font-weight: 400;
         color: black;
