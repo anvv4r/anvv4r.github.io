@@ -202,17 +202,6 @@ footer {
         text-align: right;
     }
 
-    @media screen and (max-width: 768px) {
-        p {
-            text-align: right;
-        }
-    }
-
-    @media screen and (max-width: 425px) {
-        p {
-            text-align: center;
-        }
-    }
 }
 
 .link {
