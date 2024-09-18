@@ -18,7 +18,7 @@ header {
     max-width: 100%;
     min-width: 400px;
 
-    >div {
+    > div {
         margin: 0 auto;
         height: 20px;
         width: auto;
@@ -49,7 +49,6 @@ header {
         &.orangered {
             background-color: #ff754a;
         }
-
     }
 }
 
@@ -201,7 +200,6 @@ footer {
         margin-top: 0.5rem;
         text-align: right;
     }
-
 }
 
 .link {
@@ -213,7 +211,6 @@ footer {
     color: #f96565;
 }
 
-
 @media (max-width: 768px) {
     main .main__content__left {
         display: flex;
@@ -221,7 +218,6 @@ footer {
         width: 100%;
         margin: 0;
         padding: 1rem 1rem 1rem 0rem;
-
     }
 
     main .main__content__right {
@@ -258,4 +254,9 @@ footer {
         margin-top: 0.5rem;
         text-align: center;
     }
+}
+
+ul {
+    margin: 1rem;
+    padding: 0;
 }
